@@ -74,3 +74,41 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+// ********** Simple array methods ***********
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+//* 1. slice() method --> array.slice( start, end );
+
+//! slice() method can be used to make shallow copies of the array --> array.slice()
+//! does not mutate( change ) the original array
+
+console.log(arr.slice(1, 4)); // Array(3) [ "b", "c", "d" ]
+console.log(arr.slice(-3, 3)); // Array [ "c" ]
+
+//* 2. splice() method --> array.sp;ice( start, deletecount )
+
+//! mutates( changes ) the original array
+
+console.log(arr.splice(2, 2)); // Array [ "c", "d" ]
+console.log(arr); // Array(3) [ "a", "b", "e" ]
+
+//* 3. reverse() method --> array.reverse()
+
+//! mutates( changes ) the original array
+
+const arr2 = ['k', 'i', 'd', 'r', 'a', 'h'];
+console.log(arr2.reverse()); // Array(6) [ "h", "a", "r", "d", "i", "k" ]
+
+//* 4. concat() method --> array1.concat(array2);
+
+const nameOne = ['h', 'a', 'r'];
+const nameTwo = ['d', 'i', 'k'];
+
+const fullName = nameOne.concat(nameTwo)
+console.log(fullName); // Array(6) [ "h", "a", "r", "d", "i", "k" ]
+
+//* 5 join() --> array.join( separator )
+
+console.log(fullName.join('-')); // h-a-r-d-i-k
