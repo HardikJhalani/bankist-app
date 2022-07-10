@@ -71,7 +71,7 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -120,3 +120,23 @@ const myarr = [23, 54, 21];
 console.log(myarr.at(0)); // 23
 console.log(myarr[myarr.length - 1]); // 21
 console.log(myarr.at(-1)); // 21 //* modern javascript way
+
+// ********* Looping arrays : forEach *********
+//! The forEach loop does not allow us to use break and continue statements like the for - of loop
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// using the for-of loop
+for (const [i, movement] of movements.entries()) {
+  movement > 0 ? console.log(`Movement ${i + 1} - You deposited ${movement}`) : console.log(`Movement ${i + 1} - You withdrew ${Math.abs(movement)}`);
+}
+
+// an easier way: forEach method 
+console.log('-----------------------------forEach----------------------------');
+
+movements.forEach(function(movement, index, array) { // has to be in order (mov, i, arr) is also fine
+  movement > 0 ? console.log(`Movement ${index + 1} - You deposited ${movement}`) : console.log(`Movement ${index + 1} - You withdrew ${Math.abs(movement)}`);
+})
+
+// 0: function(200)
+// 1: function(450) ...
