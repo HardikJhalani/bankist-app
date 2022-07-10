@@ -112,3 +112,11 @@ console.log(fullName); // Array(6) [ "h", "a", "r", "d", "i", "k" ]
 //* 5 join() --> array.join( separator )
 
 console.log(fullName.join('-')); // h-a-r-d-i-k
+
+
+// ********* The new at method **********
+
+const myarr = [23, 54, 21];
+console.log(myarr.at(0)); // 23
+console.log(myarr[myarr.length - 1]); // 21
+console.log(myarr.at(-1)); // 21 //* modern javascript way
