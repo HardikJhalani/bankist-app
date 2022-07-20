@@ -11,3 +11,11 @@ console.log(movementsInUSD);
 const messageArray = movements.map((mov, i) => `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`)
 
 console.log(messageArray);
+
+//********* The filter method *********
+
+const deposits = movements.filter(mov => mov > 0)
+const withdrawls = movements.filter(mov => mov < 0)
+
+console.log(deposits);
+console.log(withdrawls);
